@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const StylesOnboarding = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#d80000",
     alignItems: "center",
     justifyContent: "center",
   },

@@ -13,23 +13,15 @@ import { StatusBar } from "expo-status-bar";
 // Import Styles!
 import { StylesOnboarding } from "../styles/StylesOnboarding";
 
-// Import Icon!
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-
 export default function Onboarding() {
   const navigation = useNavigation();
 
   return (
     <ImageBackground
       style={StylesOnboarding.container}
+      source={require("../assets/images/onboarding.png")}
       blurRadius={5}
     >
-      <MaterialCommunityIcons
-        name="flower-tulip-outline"
-        size={200}
-        color="white"
-      />
-
       <Text style={StylesOnboarding.title}>WELCOME</Text>
 
       <Text style={StylesOnboarding.txt}>Do meditation. Stay focused.</Text>
@@ -39,13 +31,15 @@ export default function Onboarding() {
         style={StylesOnboarding.btn}
         onPress={() => navigation.navigate("SignIn")}
       >
-        <Text style={StylesOnboarding.txt}>Login With Email</Text>
+        <Text style={StylesOnboarding.txt}>Entre com email</Text>
       </TouchableOpacity>
 
       <View style={StylesOnboarding.viewSignUp}>
-        <Text style={StylesOnboarding.txt}>Don't have an account?</Text>
+        <Text style={StylesOnboarding.txt}>Não tem uma conta?</Text>
         <Pressable onPress={() => navigation.navigate("SignUp")}>
-          <Text style={{ fontWeight: "bold", color: "#8b4513" }}>Sign Up</Text>
+          <Text style={{ fontWeight: "bold", color: "#8b4513" }}>
+            Cadastre-se
+          </Text>
         </Pressable>
       </View>
 
