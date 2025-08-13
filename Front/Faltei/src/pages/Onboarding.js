@@ -22,7 +22,6 @@ export default function Onboarding() {
   return (
     <ImageBackground
       style={StylesOnboarding.container}
-      source={require("../assets/images/nature_background.jpg")}
       blurRadius={5}
     >
       <MaterialCommunityIcons
