@@ -13,7 +13,7 @@ import { useNavigation } from "@react-navigation/native";
 // Import Styles!
 import { stylesSign } from "../styles/StylesSign.js";
 
-import { StylesOnboarding } from "../styles/StylesOnboarding";
+import { StylesOnboarding } from "../styles/StylesOnboarding.js";
 
 export default function SignIn() {
   const navigation = useNavigation();
@@ -45,7 +45,10 @@ export default function SignIn() {
         />
       </View>
 
-      <TouchableOpacity style={stylesSign.bnt}>
+      <TouchableOpacity
+        style={stylesSign.bnt}
+        onPress={() => navigation.navigate("OnboardingScreen")}
+      >
         <Text>Login</Text>
       </TouchableOpacity>
 

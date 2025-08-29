@@ -27,7 +27,7 @@ export default function OnboardingScreen() {
   const doneButton = ({ ...props }) => {
     return (
       <TouchableOpacity style={styles.doneButton} {...props}>
-        <Text>Done</Text>
+        <Text style={{ color: "#f9ebe3" }}>Done</Text>
       </TouchableOpacity>
     );
   };
@@ -41,64 +41,92 @@ export default function OnboardingScreen() {
         containerStyles={{ paddingHorizontal: 15 }}
         pages={[
           {
-            backgroundColor: "#ADD8E6",
+            backgroundColor: "#f9ebe3",
             image: (
               <View style={styles.lottie}>
                 <LottieView
-                  source={require("../assets/images/GymWorkout.json")}
+                  source={require("../assets/images/faceID.json")}
                   autoPlay
                   loop
-                  style={{ width: "100%", height: "100%" }}
+                  style={{
+                    width: "90%",
+                    height: "90%",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
                 />
               </View>
             ),
-            title: "Sport Club Corinthians Paulista",
-          },
-          {
-            backgroundColor: "#87CEEB",
-            image: (
-              <View style={styles.lottie}>
-                <LottieView
-                  source={require("../assets/images/cat.json")}
-                  autoPlay
-                  loop
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </View>
-            ),
-            title: "Vitória Tedeia",
-          },
-          {
-            backgroundColor: "#4682B4",
-            image: (
-              <View style={styles.lottie}>
-                <LottieView
-                  source={require("../assets/images/confeti.json")}
-                  autoPlay
-                  loop
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </View>
-            ),
-            title: "Vitória",
+            title: "Reconhecimento facial rápido e reguro",
+            titleStyles: {
+              color: "#d80000",
+              fontWeight: "bold",
+              fontSize: 30,
+            },
             subtitle:
-              "Navegue de maneitra intuitiva, encontre o que precisa em segundos e aproveite ums experiência rápida e fluida!",
+              "Registre sua presença em segundos, sem listas ou assinaturas. Nosso sistema identifica você automaticamente e registra no banco de dados com total segurança.",
+            subTitleStyles: {
+              fontSize: "17",
+            },
           },
+
           {
-            backgroundColor: "#000080",
+            backgroundColor: "#f9ebe3",
             image: (
               <View style={styles.lottie}>
                 <LottieView
-                  source={require("../assets/images/healthyFood.json")}
+                  source={require("../assets/images/todo.json")}
                   autoPlay
                   loop
-                  style={{ width: "100%", height: "100%" }}
+                  style={{
+                    width: "90%",
+                    height: "90%",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
                 />
               </View>
             ),
-            title: "Seus dados protegidos",
+            title: "Acompanhe suas aulas e atividades",
+            titleStyles: {
+              color: "#d80000",
+              fontWeight: "bold",
+              fontSize: 30,
+            },
             subtitle:
-              "Aqui você pode confiar que suas infromações estão sempre protegidas!",
+              "Veja suas tarefas, materiais e avisos em um só lugar. Tudo organizado para você focar no que realmente importa: aprender.",
+            ubTitleStyles: {
+              fontSize: "17",
+            },
+          },
+          {
+            backgroundColor: "#f9ebe3",
+            image: (
+              <View style={styles.lottie}>
+                <LottieView
+                  source={require("../assets/images/profileuser.json")}
+                  autoPlay
+                  loop
+                  style={{
+                    width: "90%",
+                    height: "90%",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                />
+              </View>
+            ),
+            title: "Perfil exclusivo para cada aluno",
+            titleStyles: {
+              color: "#d80000",
+              fontWeight: "bold",
+              fontSize: 30,
+            },
+            subtitle:
+              "Faça login, acesse seu histórico, personalize suas informações e acompanhe seu desempenho de forma individual e segura.",
+            ubTitleStyles: {
+              fontSize: "17",
+            },
           },
         ]}
       />
@@ -111,7 +139,7 @@ export default function OnboardingScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#f9ebe3",
   },
 
   lottie: {
@@ -120,7 +148,7 @@ const styles = StyleSheet.create({
   },
   doneButton: {
     padding: 20,
-    backgroundColor: "#fff",
+    backgroundColor: "#d80000",
     borderTopLeftRadius: "100%",
     borderBottomLeftRadius: "100%",
   },

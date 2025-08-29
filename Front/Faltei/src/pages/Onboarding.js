@@ -22,24 +22,23 @@ export default function Onboarding() {
       source={require("../assets/images/onboarding.png")}
       blurRadius={5}
     >
-      <Text style={StylesOnboarding.title}>WELCOME</Text>
+      <Text style={StylesOnboarding.title}>Bem-vindo (a)!</Text>
 
-      <Text style={StylesOnboarding.txt}>Do meditation. Stay focused.</Text>
-      <Text style={StylesOnboarding.txt}>Live a healthy life.</Text>
+      <Text style={StylesOnboarding.txt1}>
+        Onde a presença encontra o futuro da educação!
+      </Text>
 
       <TouchableOpacity
         style={StylesOnboarding.btn}
         onPress={() => navigation.navigate("SignIn")}
       >
-        <Text style={StylesOnboarding.txt}>Entre com email</Text>
+        <Text style={StylesOnboarding.txt}>Login com Email</Text>
       </TouchableOpacity>
 
       <View style={StylesOnboarding.viewSignUp}>
-        <Text style={StylesOnboarding.txt}>Não tem uma conta?</Text>
+        <Text style={StylesOnboarding.txt2}>Você não possui conta?</Text>
         <Pressable onPress={() => navigation.navigate("SignUp")}>
-          <Text style={{ fontWeight: "bold", color: "#8b4513" }}>
-            Cadastre-se
-          </Text>
+          <Text style={{ fontWeight: "bold", color: "#f9ebe3" }}>Sign Up</Text>
         </Pressable>
       </View>
 

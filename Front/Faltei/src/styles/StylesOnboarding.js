@@ -16,12 +16,13 @@ export const StylesOnboarding = StyleSheet.create({
 
   viewSignUp: {
     justifyContent: "center",
+    alignItems: "center",
     flexDirection: "row",
     gap: 7,
   },
 
   btn: {
-    backgroundColor: "#8b4513",
+    backgroundColor: "#f9ebe3",
     width: "80%",
     padding: 10,
     alignItems: "center",
@@ -33,6 +34,18 @@ export const StylesOnboarding = StyleSheet.create({
   },
 
   txt: {
-    color: "#fff",
+    color: "#d80000",
+    fontSize: 20,
+  },
+
+  txt1: {
+    color: "#f9ebe3",
+    fontSize: 17,
+    fontWeight: "bold",
+  },
+
+  txt2: {
+    color: "#f9ebe3",
+    fontSize: 17,
   },
 });

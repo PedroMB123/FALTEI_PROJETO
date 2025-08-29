@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import SignUp from "./src/pages/SignUp";
 import SignIn from "./src/pages/SignIn.js";
+import OnboardingScreen from "./src/screens/OnboardingScreen.js";
 import Onboarding from "./src/pages/Onboarding.js";
 
 const Stack = createNativeStackNavigator();
@@ -14,9 +15,10 @@ export default function App() {
         initialRouteName="Onboarding"
         screenOptions={{ headerShown: false }}
       >
+        <Stack.Screen name="Onboarding" component={Onboarding} />
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="SignIn" component={SignIn} />
-        <Stack.Screen name="Onboarding" component={Onboarding} />
+        <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
