@@ -15,7 +15,6 @@ package-lock.json
 # Diretórios do projeto
 android/
 ios/
-node_modules/
 .expo/
 .expo-shared/
 web-build/
