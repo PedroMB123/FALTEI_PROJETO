@@ -49,3 +49,4 @@ export const StylesOnboarding = StyleSheet.create({
     fontSize: 17,
   },
 });
+//
