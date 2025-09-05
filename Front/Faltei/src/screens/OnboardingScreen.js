@@ -26,7 +26,11 @@ export default function OnboardingScreen() {
 
   const doneButton = ({ ...props }) => {
     return (
-      <TouchableOpacity style={styles.doneButton} {...props}>
+      <TouchableOpacity
+        style={styles.doneButton}
+        {...props}
+        onPress={() => navigation.navigate("InitialPage")}
+      >
         <Text style={{ color: "#f9ebe3" }}>Done</Text>
       </TouchableOpacity>
     );
@@ -45,7 +49,7 @@ export default function OnboardingScreen() {
             image: (
               <View style={styles.lottie}>
                 <LottieView
-                  source={require("../assets/images/faceID.json")}
+                  source={require("../assets/images/rfid.json")}
                   autoPlay
                   loop
                   style={{
@@ -57,14 +61,14 @@ export default function OnboardingScreen() {
                 />
               </View>
             ),
-            title: "Reconhecimento facial rápido e reguro",
+            title: "Registro por cartão rápido e seguro",
             titleStyles: {
               color: "#d80000",
               fontWeight: "bold",
               fontSize: 30,
             },
             subtitle:
-              "Registre sua presença em segundos, sem listas ou assinaturas. Nosso sistema identifica você automaticamente e registra no banco de dados com total segurança.",
+              "Registre sua presença em segundos apenas aproximando seu cartão. Nosso sistema reconhece automaticamente e salva no banco de dados com total segurança.",
             subTitleStyles: {
               fontSize: "17",
             },
