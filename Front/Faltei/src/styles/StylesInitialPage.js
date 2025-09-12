@@ -30,6 +30,7 @@ export const StylesInitialPage = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    gap: 10,
   },
 
   balao1: {
