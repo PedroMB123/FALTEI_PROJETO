@@ -13,21 +13,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-<<<<<<< HEAD
-        initialRouteName="InitialPage"
-=======
         initialRouteName="Onboarding"
->>>>>>> Vitoria
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="Onboarding" component={Onboarding} />
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="SignIn" component={SignIn} />
-<<<<<<< HEAD
-  <Stack.Screen name="InitialPage" component={InitialPage} />
-=======
+        <Stack.Screen name="InitialPage" component={InitialPage} />
         <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
->>>>>>> Vitoria
       </Stack.Navigator >
     </NavigationContainer >
   );
