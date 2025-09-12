@@ -4,7 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import { useNavigation } from "@react-navigation/native";
 import EvilIcons from '@expo/vector-icons/EvilIcons';
 import { StylesInitialPage } from "../styles/StylesInitialPage";
-import { Calendar } from 'react-native-calendars';  // Importando o calendário
+import { Calendar } from 'react-native-calendars';
 
 export default function InitialPage() {
   const navigation = useNavigation();
@@ -13,16 +13,13 @@ export default function InitialPage() {
     <View style={{ flex: 1 }}>
       <View style={StylesInitialPage.header}>
         <Text style={StylesInitialPage.ptxt}> Faltei! </Text>
-        <EvilIcons name="user" size={60} color="#E6E6FA" style={StylesInitialPage.user} />
+        <EvilIcons onPress={() => navigation.navigate("UserPage")} name="user" size={60} color="#E6E6FA" style={StylesInitialPage.user} />
       </View >
 
       <View style={StylesInitialPage.fundo}>
 
         {/* Calendário com as novas cores */}
-        <View style={{
-          margin: 10, height: 20,
-          width: '100%',
-        }}>
+        <View style={StylesInitialPage.calendar}>
           <Calendar
             // Estilo básico
             style={{ borderRadius: 10 }}
@@ -63,24 +60,10 @@ export default function InitialPage() {
           <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.faltas} />
         </View>
 
-        <View style={StylesInitialPage.row}>
-          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
-          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
-        </View>
+
 
         <View style={StylesInitialPage.row}>
-          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
-          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
-        </View>
-
-        <View style={StylesInitialPage.row}>
-          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
-          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
-        </View>
-
-        <View style={StylesInitialPage.row}>
-          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
-          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
+          <TouchableOpacity onPress={() => navigation.navigate("AllMateria")} style={StylesInitialPage.button} />
         </View>
 
       </View >

@@ -33,6 +33,9 @@ export const StylesInitialPage = StyleSheet.create({
     gap: 10,
   },
 
+  calendar: {
+
+  },
   balao1: {
     height: 250,
     width: 250,
