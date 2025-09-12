@@ -27,9 +27,9 @@ export const StylesInitialPage = StyleSheet.create({
   fundo: {
     flex: 1,
     backgroundColor: "#fafafa",
-    flexDirection: 'column',   // Garante que os filhos sejam empilhados verticalmente
-    justifyContent: 'center', // Espaço igual entre os filhos
-    alignItems: 'center',      // Centraliza horizontalmente
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   balao1: {

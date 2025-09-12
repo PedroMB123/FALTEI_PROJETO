@@ -61,7 +61,7 @@ export default function SignUp() {
       style={{
         width: "100%",
         height: "100%",
-        backgroundColor: "#f9ebe3",
+        backgroundColor: "#E6E6FA",
         padding: 40,
         justifyContent: "center",
         alignItems: "center",
@@ -72,28 +72,28 @@ export default function SignUp() {
       <View style={{ marginTop: 70, width: "100%" }}>
         <TextInput
           style={stylesSign.input}
-          placeholderTextColor={"#bebebe"}
+          placeholderTextColor={"#C8A2C8"}
           placeholder="Digite seu nome completo"
           value={nome}
           onChangeText={setNome}
         />
         <TextInput
           style={stylesSign.input}
-          placeholderTextColor={"#bebebe"}
+          placeholderTextColor={"#C8A2C8"}
           placeholder="Digite seu email educacional ou pessoal"
           value={email}
           onChangeText={setEmail}
         />
         <TextInput
           style={stylesSign.input}
-          placeholderTextColor={"#bebebe"}
+          placeholderTextColor={"#C8A2C8"}
           placeholder="Confirme seu email"
           value={confirmarEmail}
           onChangeText={setConfirmarEmail}
         />
         <TextInput
           style={stylesSign.input}
-          placeholderTextColor={"#bebebe"}
+          placeholderTextColor={"#C8A2C8"}
           placeholder="Crie sua senha"
           secureTextEntry={true}
           value={senha}
@@ -110,7 +110,7 @@ export default function SignUp() {
       </View>
 
       <TouchableOpacity style={stylesSign.bnt} onPress={validaCadastro}>
-        <Text>Cadastre-se</Text>
+        <Text style={{ color: "#E6E6FA" }}>Cadastre-se</Text>
       </TouchableOpacity>
 
       <View
@@ -121,9 +121,9 @@ export default function SignUp() {
           marginTop: 5,
         }}
       >
-        <Text style={{ color: "red" }}>Já tem uma conta? </Text>
+        <Text style={{ color: "#6A0DAD" }}>Já tem uma conta? </Text>
         <Pressable onPress={() => login.navigate("SignIn")}>
-          <Text style={{ fontWeight: "bold", color: "red" }}>Faça login</Text>
+          <Text style={{ fontWeight: "bold", color: "#6A0DAD" }}>Faça login</Text>
         </Pressable>
       </View>
       <StatusBar hidden />
