@@ -3,13 +3,13 @@ import { StyleSheet } from "react-native";
 export const StylesOnboarding = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#d80000",
+    backgroundColor: "#E6E6FA",
     alignItems: "center",
     justifyContent: "center",
   },
 
   title: {
-    color: "#fff",
+    color: "#4B0082",
     fontSize: 40,
     fontWeight: "bold",
   },
@@ -22,7 +22,7 @@ export const StylesOnboarding = StyleSheet.create({
   },
 
   btn: {
-    backgroundColor: "#f9ebe3",
+    backgroundColor: "#4B0082",
     width: "80%",
     padding: 10,
     alignItems: "center",
@@ -34,19 +34,19 @@ export const StylesOnboarding = StyleSheet.create({
   },
 
   txt: {
-    color: "#d80000",
-    fontSize: 20,
+    color: "#E6E6FA",
+    fontSize: 15,
   },
 
   txt1: {
-    color: "#f9ebe3",
-    fontSize: 17,
+    color: "#6A0DAD",
+    fontSize: 15,
     fontWeight: "bold",
   },
 
   txt2: {
-    color: "#f9ebe3",
-    fontSize: 17,
+    color: "#4B0082",
+    fontSize: 15,
   },
 });
 //

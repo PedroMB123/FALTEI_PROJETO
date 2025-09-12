@@ -1,5 +1,4 @@
 import {
-  ImageBackground,
   Text,
   View,
   TouchableOpacity,
@@ -17,11 +16,7 @@ export default function Onboarding() {
   const navigation = useNavigation();
 
   return (
-    <ImageBackground
-      style={StylesOnboarding.container}
-      source={require("../assets/images/onboarding.png")}
-      blurRadius={5}
-    >
+    <View style={StylesOnboarding.container}>
       <Text style={StylesOnboarding.title}>Bem-vindo (a)!</Text>
 
       <Text style={StylesOnboarding.txt1}>
@@ -38,11 +33,11 @@ export default function Onboarding() {
       <View style={StylesOnboarding.viewSignUp}>
         <Text style={StylesOnboarding.txt2}>Você não possui conta?</Text>
         <Pressable onPress={() => navigation.navigate("SignUp")}>
-          <Text style={{ fontWeight: "bold", color: "#f9ebe3" }}>Sign Up</Text>
+          <Text style={{ fontWeight: "bold", color: "#4B0082" }}>Sign Up</Text>
         </Pressable>
       </View>
 
       <StatusBar hidden />
-    </ImageBackground>
+    </View>
   );
 }

@@ -28,10 +28,8 @@ export const StylesInitialPage = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fafafa",
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 20,
-    paddingVertical: 20,
   },
 
   balao1: {

@@ -16,6 +16,7 @@ import { setItem } from "../components/AsyncStorage";
 
 const { width, height } = Dimensions.get("window");
 
+
 export default function OnboardingScreen() {
   const navigation = useNavigation();
 
@@ -45,7 +46,7 @@ export default function OnboardingScreen() {
         containerStyles={{ paddingHorizontal: 15 }}
         pages={[
           {
-            backgroundColor: "#f9ebe3",
+            backgroundColor: "#E6E6FA",
             image: (
               <View style={styles.lottie}>
                 <LottieView
@@ -63,7 +64,7 @@ export default function OnboardingScreen() {
             ),
             title: "Registro por cartão rápido e seguro",
             titleStyles: {
-              color: "#d80000",
+              color: "#4b0082",
               fontWeight: "bold",
               fontSize: 30,
             },
@@ -71,11 +72,12 @@ export default function OnboardingScreen() {
               "Registre sua presença em segundos apenas aproximando seu cartão. Nosso sistema reconhece automaticamente e salva no banco de dados com total segurança.",
             subTitleStyles: {
               fontSize: "17",
+              color: "#C8A2C8"
             },
           },
 
           {
-            backgroundColor: "#f9ebe3",
+            backgroundColor: "#E6E6FA",
             image: (
               <View style={styles.lottie}>
                 <LottieView
@@ -93,18 +95,19 @@ export default function OnboardingScreen() {
             ),
             title: "Acompanhe suas aulas e atividades",
             titleStyles: {
-              color: "#d80000",
+              color: "#4b0082",
               fontWeight: "bold",
               fontSize: 30,
             },
             subtitle:
               "Veja suas tarefas, materiais e avisos em um só lugar. Tudo organizado para você focar no que realmente importa: aprender.",
-            ubTitleStyles: {
+            subTitleStyles: {
               fontSize: "17",
+              color: "#C8A2C8"
             },
           },
           {
-            backgroundColor: "#f9ebe3",
+            backgroundColor: "#E6E6FA",
             image: (
               <View style={styles.lottie}>
                 <LottieView
@@ -122,14 +125,15 @@ export default function OnboardingScreen() {
             ),
             title: "Perfil exclusivo para cada aluno",
             titleStyles: {
-              color: "#d80000",
+              color: "#4b0082",
               fontWeight: "bold",
               fontSize: 30,
             },
             subtitle:
               "Faça login, acesse seu histórico, personalize suas informações e acompanhe seu desempenho de forma individual e segura.",
-            ubTitleStyles: {
+            subTitleStyles: {
               fontSize: "17",
+              color: "#C8A2C8"
             },
           },
         ]}
@@ -143,7 +147,7 @@ export default function OnboardingScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f9ebe3",
+    backgroundColor: "#E6E6FA",
   },
 
   lottie: {
@@ -152,7 +156,7 @@ const styles = StyleSheet.create({
   },
   doneButton: {
     padding: 20,
-    backgroundColor: "#d80000",
+    backgroundColor: "#4B0082",
     borderTopLeftRadius: "100%",
     borderBottomLeftRadius: "100%",
   },
