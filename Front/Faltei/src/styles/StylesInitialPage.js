@@ -27,9 +27,11 @@ export const StylesInitialPage = StyleSheet.create({
   fundo: {
     flex: 1,
     backgroundColor: "#fafafa",
-    flexDirection: 'column',   // Garante que os filhos sejam empilhados verticalmente
-    justifyContent: 'center', // Espaço igual entre os filhos
-    alignItems: 'center',      // Centraliza horizontalmente
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 20,
   },
 
   balao1: {
@@ -43,13 +45,19 @@ export const StylesInitialPage = StyleSheet.create({
     height: 200,
     width: 350,
     backgroundColor: "#C8A2C8",
-    borderRadius: 30
+    borderRadius: 30,
   },
 
-  balao3: {
-    height: 200,
-    width: 400,
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+  },
+
+  button: {
+    height: 80,
+    width: '40%',
     backgroundColor: "#C8A2C8",
-    borderRadius: 30
-  }
-})
+    borderRadius: 10,
+  },
+});
