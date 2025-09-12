@@ -10,13 +10,13 @@ export const StylesInitialPage = StyleSheet.create({
 
   header: {
     height: 100,
-    backgroundColor: "#d80000",
+    backgroundColor: "#4B0082",
     justifyContent: "flex-end",
   },
 
   ptxt: {
     fontSize: 50,
-    color: "#f9ebe3",
+    color: "#E6E6FA",
   },
 
   user: {
@@ -25,35 +25,31 @@ export const StylesInitialPage = StyleSheet.create({
   },
 
   fundo: {
-    height: "100%",
-    width: "100%",
-    backgroundColor: "#f9ebe3"
+    flex: 1,
+    backgroundColor: "#fafafa",
+    flexDirection: 'column',   // Garante que os filhos sejam empilhados verticalmente
+    justifyContent: 'center', // Espaço igual entre os filhos
+    alignItems: 'center',      // Centraliza horizontalmente
   },
 
   balao1: {
     height: 250,
     width: 250,
-    backgroundColor: "#d80000",
-    marginLeft: 90,
-    marginTop: 40,
-    borderRadius: 30
+    backgroundColor: "#C8A2C8",
+    borderRadius: 30,
   },
 
   balao2: {
     height: 200,
     width: 350,
-    backgroundColor: "#d80000",
-    marginLeft: 40,
-    marginTop: 45,
+    backgroundColor: "#C8A2C8",
     borderRadius: 30
   },
 
   balao3: {
     height: 200,
     width: 400,
-    backgroundColor: "#d80000",
-    marginLeft: 15,
-    marginTop: 45,
+    backgroundColor: "#C8A2C8",
     borderRadius: 30
   }
 })

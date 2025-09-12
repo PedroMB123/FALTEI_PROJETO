@@ -21,7 +21,7 @@ export default function App() {
         <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen name="InitialPage" component={InitialPage} />
         <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+      </Stack.Navigator >
+    </NavigationContainer >
   );
 }

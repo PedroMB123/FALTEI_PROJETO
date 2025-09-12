@@ -1,6 +1,8 @@
 import React from "react";
 import {
+  Button,
   Text,
+  TouchableOpacity,
   View
 } from "react-native";
 
@@ -20,7 +22,7 @@ export default function InitialPage() {
     <View>
       <View style={StylesInitialPage.header}>
         <Text style={StylesInitialPage.ptxt}> Faltei! </Text>
-        <EvilIcons name="user" size={60} color="#f9ebe3" style={StylesInitialPage.user} />
+        <EvilIcons name="user" size={60} color="#E6E6FA" style={StylesInitialPage.user} />
       </View >
       <View style={StylesInitialPage.fundo}>
         <View style={StylesInitialPage.balao1}>
@@ -28,6 +30,7 @@ export default function InitialPage() {
         <View style={StylesInitialPage.balao2}>
         </View>
         <View style={StylesInitialPage.balao3}>
+          <TouchableOpacity />
         </View>
       </View>
       <StatusBar hidden />

@@ -13,6 +13,12 @@ import { useNavigation } from "@react-navigation/native";
 // Import Styles!
 import { stylesSign } from "../styles/StylesSign.js";
 
+// import { StylesOnboarding } from "../styles/StylesOnboarding";
+
+// Import Component TextInput
+import InputComp from "../components/inputComp.js"
+import { stylesOnboarding } from "../styles/StylesOnboarding.js"
+
 export default function SignIn() {
   const navigation = useNavigation();
   return (
