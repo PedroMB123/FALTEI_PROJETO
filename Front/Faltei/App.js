@@ -6,6 +6,7 @@ import SignIn from "./src/pages/SignIn.js";
 import InitialPage from "./src/pages/InitialPage.js";
 import OnboardingScreen from "./src/screens/OnboardingScreen.js";
 import Onboarding from "./src/pages/Onboarding.js";
+import Materia from "./src/pages/materia_example.js"
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,7 @@ export default function App() {
         <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen name="InitialPage" component={InitialPage} />
         <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
+        <Stack.Screen name="Materia" component={Materia} />
       </Stack.Navigator >
     </NavigationContainer >
   );
