@@ -17,23 +17,30 @@ export default function InitialPage() {
 
       <View style={StylesInitialPage.fundo}>
         <View style={StylesInitialPage.balao1}></View>
-        <View style={StylesInitialPage.balao2}></View>
+
+        <View style={StylesInitialPage.maisFaltas}>
+          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.faltas} />
+          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.faltas} />
+        </View>
 
         <View style={StylesInitialPage.row}>
-          <TouchableOpacity style={StylesInitialPage.button} />
-          <TouchableOpacity style={StylesInitialPage.button} />
+          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
+          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
         </View>
+
         <View style={StylesInitialPage.row}>
-          <TouchableOpacity style={StylesInitialPage.button} />
-          <TouchableOpacity style={StylesInitialPage.button} />
+          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
+          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
         </View>
+
         <View style={StylesInitialPage.row}>
-          <TouchableOpacity style={StylesInitialPage.button} />
-          <TouchableOpacity style={StylesInitialPage.button} />
+          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
+          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
         </View>
+
         <View style={StylesInitialPage.row}>
-          <TouchableOpacity style={StylesInitialPage.button} />
-          <TouchableOpacity style={StylesInitialPage.button} />
+          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
+          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.button} />
         </View>
 
       </View>

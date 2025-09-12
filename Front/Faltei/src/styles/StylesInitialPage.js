@@ -40,11 +40,17 @@ export const StylesInitialPage = StyleSheet.create({
     borderRadius: 30,
   },
 
-  balao2: {
+  maisFaltas: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+  },
+
+  faltas: {
     height: 200,
-    width: 350,
+    width: '45%',
     backgroundColor: "#C8A2C8",
-    borderRadius: 30,
+    borderRadius: 10,
   },
 
   row: {
