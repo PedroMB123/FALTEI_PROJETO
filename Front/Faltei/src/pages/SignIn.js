@@ -16,7 +16,7 @@ import { stylesSign } from "../styles/StylesSign.js";
 import { StylesOnboarding } from "../styles/StylesOnboarding";
 
 // Import Component TextInput
-import InputComp from "../components."
+import InputComp from "../components/inputComp.js"
 
 export default function SignIn() {
   const navigation = useNavigation();
