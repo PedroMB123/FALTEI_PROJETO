@@ -12,7 +12,6 @@ export default function InitialPage() {
     <View style={{ flex: 1 }}>
       <View style={StylesInitialPage.header}>
         <Text style={StylesInitialPage.ptxt}> Faltei! </Text>
-        <EvilIcons name="user" size={60} color="#E6E6FA" style={StylesInitialPage.user} />
       </View >
 
       <View style={StylesInitialPage.fundo}>
