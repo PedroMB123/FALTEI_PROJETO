@@ -4,7 +4,6 @@ import { StatusBar } from "expo-status-bar";
 import { useNavigation } from "@react-navigation/native";
 import EvilIcons from '@expo/vector-icons/EvilIcons';
 import { StylesInitialPage } from "../styles/StylesInitialPage";
-import { Calendar } from 'react-native-calendars';
 
 export default function InitialPage() {
   const navigation = useNavigation();
