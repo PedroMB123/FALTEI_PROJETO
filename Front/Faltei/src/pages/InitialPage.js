@@ -24,7 +24,7 @@ export default function InitialPage() {
             // Estilo básico
             style={{ borderRadius: 10 }}
             theme={{
-              backgroundColor: '#FAFAFA',  // Branco gelo como fundo principal
+              backgroundColor: '#FAFAFA',
               calendarBackground: '#E6E6FA',  // Lavanda clara como fundo do calendário
               textSectionTitleColor: '#6A0DAD',  // Roxo médio para título das seções
               textSectionTitleDisabledColor: '#A9A9A9',  // Cinza claro para texto desabilitado
