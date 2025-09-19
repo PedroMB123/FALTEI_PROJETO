@@ -63,7 +63,9 @@ export default function InitialPage() {
 
 
         <View style={StylesInitialPage.row}>
-          <TouchableOpacity onPress={() => navigation.navigate("AllMateria")} style={StylesInitialPage.button} />
+          <TouchableOpacity onPress={() => navigation.navigate("AllMateria")} style={StylesInitialPage.button} >
+            <Text>Acesse suas disciplinas</Text>
+          </TouchableOpacity>
         </View>
 
       </View >

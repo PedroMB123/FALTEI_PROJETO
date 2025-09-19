@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-export const StylesInitialPage = StyleSheet.create({
+export const StylesTelaDeMaterias = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#f9ebe3",
@@ -63,12 +63,32 @@ export const StylesInitialPage = StyleSheet.create({
   },
 
   button: {
-    width: "80%",
-    paddingVertical: 40,
-    backgroundColor: "#6c3483",
-    borderRadius: 12,
-    alignItems: "center",
-    marginTop: 10,
+    height: 80,
+    width: '40%',
+    backgroundColor: "#C8A2C8",
+    borderRadius: 10,
   },
 
+  nome: {
+    flex: 1,
+    paddingVertical: 15,
+    marginHorizontal: 5,
+    backgroundColor: '#C8A2C8',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  escrita: {
+    color: 'white',
+    fontSize: 25,
+    textAlign: 'center',
+  },
+
+  icone: {
+    width: 100,
+    height: 100,
+    marginBottom: 6, // espaço entre ícone e texto
+    resizeMode: "contain",
+  }
 });
