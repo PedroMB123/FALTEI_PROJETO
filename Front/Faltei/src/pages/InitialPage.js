@@ -18,13 +18,13 @@ export default function InitialPage() {
 
       <View style={StylesInitialPage.fundo}>
 
-        {/* Calendário com as novas cores */}
+
         <View style={{
           margin: 10, height: 20,
           width: '100%',
         }}>
           <Calendar
-            // Estilo básico
+
             style={{ borderRadius: 10 }}
             theme={{
               backgroundColor: '#FAFAFA',
@@ -40,9 +40,9 @@ export default function InitialPage() {
               selectedDotColor: '#FAFAFA',
               arrowColor: '#6A0DAD',
               monthTextColor: '#4B0082',
-              indicatorColor: '#4B0082', z
+              indicatorColor: '#4B0082',
             }}
-            // Configuração do calendário
+
             current={'2025-09-12'}
             minDate={'2023-01-01'}
             maxDate={'2025-12-31'}
