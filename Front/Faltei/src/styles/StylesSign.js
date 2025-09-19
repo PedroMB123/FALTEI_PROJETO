@@ -28,6 +28,6 @@ export const stylesSign = StyleSheet.create({
     width: "180",
     justifyContent: "center",
     alignItems: "center",
-
   },
+
 });
