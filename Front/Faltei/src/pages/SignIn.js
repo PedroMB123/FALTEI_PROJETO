@@ -3,14 +3,12 @@ import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { stylesSign } from "../styles/StylesSign.js";
-import { useAuth } from "../context/AuthContext.js";
 import axios from "axios";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const navigation = useNavigation();
-  const { login } = useAuth();
 
   async function validaLogin() {
     if (!email || !senha) {
@@ -27,8 +25,6 @@ export default function SignIn() {
 
       const data = response.data;
 
-      // Salva os dados do usuário no AuthContext e AsyncStorage
-      await login(data);
 
       navigation.navigate("InitialPage");
     } catch (error) {

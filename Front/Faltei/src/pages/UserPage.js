@@ -1,111 +1,76 @@
-import React, { useState, useEffect } from "react";
-import { Text, View, TextInput, Button, ScrollView, StyleSheet } from "react-native";
-import { StatusBar } from "expo-status-bar";
-import EvilIcons from '@expo/vector-icons/EvilIcons';
-import { useNavigation } from "@react-navigation/native";
-import { StylesInitialPage } from "../styles/StylesInitialPage";
-import { useAuth } from "../context/AuthContext.js";
+import React from "react";
+import { View, Text, StyleSheet, Image, SafeAreaView } from "react-native";
 
-export default function InitialPage() {
-  const navigation = useNavigation();
-  const { user, updateUser } = useAuth();
-
-  const [telefone, setTelefone] = useState(user?.telefone || "");
-  const [cpf, setCpf] = useState(user?.cpf || "");
-
-  const handleSave = () => {
-    updateUser({ telefone, cpf });
-    alert("Informações salvas com sucesso!");
+export default function UserPage() {
+  // 🔹 Aqui você pode futuramente buscar os dados do banco
+  const user = {
+    name: "João Silva",
+    email: "joao.silva@email.com",
+    turma: "3º Ano B",
+    photo: "https://i.pravatar.cc/300" // foto genérica
   };
 
   return (
-    <View style={{ flex: 1 }}>
-      <View style={StylesInitialPage.header}>
-        <Text style={StylesInitialPage.ptxt}>FALTEI!</Text>
-        <EvilIcons onPress={() => navigation.navigate("UserPage")} name="user" size={60} color="#E6E6FA" style={StylesInitialPage.user} />
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>Perfil</Text>
+
+      {/* Foto do usuário */}
+      <View style={styles.imageContainer}>
+        <Image source={{ uri: user.photo }} style={styles.image} />
       </View>
 
-      <ScrollView contentContainerStyle={styles.profileContainer}>
-        <Text style={styles.profileTitle}>Perfil do Aluno</Text>
+      {/* Informações do usuário */}
+      <View style={styles.infoBox}>
+        <Text style={styles.label}>Nome</Text>
+        <Text style={styles.value}>{user.name}</Text>
 
-        <View style={styles.inputContainer}>
-          <Text style={styles.titleName}>Nome</Text>
-          <Text style={styles.valueName}>{user?.nome}</Text>
-        </View>
+        <Text style={styles.label}>Email</Text>
+        <Text style={styles.value}>{user.email}</Text>
 
-        <View style={styles.inputContainer}>
-          <Text style={styles.titleName}>Email educacional</Text>
-          <Text style={styles.valueName}>{user?.email}</Text>
-        </View>
-
-        <View style={styles.inputContainer}>
-          <Text style={styles.titleName}>Turma</Text>
-          <Text style={styles.valueName}>{user?.turma}</Text>
-        </View>
-
-        <View style={styles.inputContainer}>
-          <Text style={styles.titleName}>Escola</Text>
-          <Text style={styles.valueName}>{user?.escola}</Text>
-        </View>
-
-        <TextInput
-          style={styles.input}
-          placeholder="Telefone (Opcional)"
-          value={telefone}
-          onChangeText={setTelefone}
-          keyboardType="phone-pad"
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="CPF (Opcional)"
-          value={cpf}
-          onChangeText={setCpf}
-          keyboardType="numeric"
-        />
-
-        <Button title="Salvar" onPress={handleSave} />
-      </ScrollView>
-
-      <StatusBar hidden />
-    </View>
+        <Text style={styles.label}>Turma</Text>
+        <Text style={styles.value}>{user.turma}</Text>
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  profileContainer: {
-    flexGrow: 1,
+  container: {
+    flex: 1,
+    backgroundColor: "#f9f9f9",
     padding: 20,
-    justifyContent: "flex-start",
-    paddingTop: 120,
+    alignItems: "center",
   },
-  profileTitle: {
+  title: {
     fontSize: 24,
     fontWeight: "bold",
-    textAlign: "center",
+    marginVertical: 20,
+  },
+  imageContainer: {
+    alignItems: "center",
     marginBottom: 20,
   },
-  inputContainer: {
-    marginBottom: 15,
+  image: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
   },
-  titleName: {
-    fontSize: 16,
-    color: "#555",
+  infoBox: {
+    width: "100%",
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    padding: 20,
+    elevation: 3,
   },
-  valueName: {
+  label: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: "#888",
+    marginTop: 10,
+  },
+  value: {
     fontSize: 16,
     color: "#333",
-    padding: 10,
-    borderWidth: 1,
-    borderColor: "#ddd",
-    borderRadius: 5,
-    marginTop: 5,
-  },
-  input: {
-    height: 40,
-    borderColor: "#ddd",
-    borderWidth: 1,
-    borderRadius: 5,
-    marginBottom: 15,
-    paddingLeft: 10,
+    marginBottom: 5,
   },
 });
