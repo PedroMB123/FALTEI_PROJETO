@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, SafeAreaView } from "react-native";
+import { View, Text, Image, SafeAreaView } from "react-native";
+import { StylesUserPage } from "../styles/StylesUserPage";
 
 export default function UserPage() {
   // 🔹 Aqui você pode futuramente buscar os dados do banco
