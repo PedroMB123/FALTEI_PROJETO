@@ -12,66 +12,27 @@ export default function UserPage() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Perfil</Text>
+    <SafeAreaView style={StylesUserPage.container}>
+      <Text style={StylesUserPage.title}>Perfil</Text>
 
       {/* Foto do usuário */}
-      <View style={styles.imageContainer}>
-        <Image source={{ uri: user.photo }} style={styles.image} />
+      <View style={StylesUserPage.imageContainer}>
+        <Image source={{ uri: user.photo }} style={StylesUserPage.image} />
       </View>
 
       {/* Informações do usuário */}
-      <View style={styles.infoBox}>
-        <Text style={styles.label}>Nome</Text>
-        <Text style={styles.value}>{user.name}</Text>
+      <View style={StylesUserPage.infoBox}>
+        <Text style={StylesUserPage.label}>Nome</Text>
+        <Text style={StylesUserPage.value}>{user.name}</Text>
 
-        <Text style={styles.label}>Email</Text>
-        <Text style={styles.value}>{user.email}</Text>
+        <Text style={StylesUserPage.label}>Email</Text>
+        <Text style={StylesUserPage.value}>{user.email}</Text>
 
-        <Text style={styles.label}>Turma</Text>
-        <Text style={styles.value}>{user.turma}</Text>
+        <Text style={StylesUserPage.label}>Turma</Text>
+        <Text style={StylesUserPage.value}>{user.turma}</Text>
       </View>
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#f9f9f9",
-    padding: 20,
-    alignItems: "center",
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginVertical: 20,
-  },
-  imageContainer: {
-    alignItems: "center",
-    marginBottom: 20,
-  },
-  image: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-  },
-  infoBox: {
-    width: "100%",
-    backgroundColor: "#fff",
-    borderRadius: 12,
-    padding: 20,
-    elevation: 3,
-  },
-  label: {
-    fontSize: 14,
-    fontWeight: "600",
-    color: "#888",
-    marginTop: 10,
-  },
-  value: {
-    fontSize: 16,
-    color: "#333",
-    marginBottom: 5,
-  },
-});
+
