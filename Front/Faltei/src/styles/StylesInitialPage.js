@@ -9,14 +9,23 @@ export const StylesInitialPage = StyleSheet.create({
   },
 
   header: {
-    height: 100,
-    backgroundColor: "#4B0082",
-    justifyContent: "flex-end",
+    //height: 100,
+    //justifyContent: "flex-end",
+    //headerTitleAlign: 'left',
+    top: 0,
+    left: 0,
+    right: 0,
+    paddingTop: 40,
+    paddingHorizontal: 16,
+    paddingBottom: 10,
+    backgroundColor: '#4B0082',
   },
 
   ptxt: {
     fontSize: 50,
     color: "#E6E6FA",
+    fontFamily: 'BebasNeue',
+    textAlign: 'left',
   },
 
   user: {
@@ -34,7 +43,7 @@ export const StylesInitialPage = StyleSheet.create({
   },
 
   calendar: {
-
+    marginBottom: 50,
   },
   balao1: {
     height: 250,
@@ -49,26 +58,34 @@ export const StylesInitialPage = StyleSheet.create({
     width: '100%',
   },
 
-  faltas: {
+  faltas1: {
     height: 200,
+    marginLeft: 15,
     width: '45%',
     backgroundColor: "#C8A2C8",
-    borderRadius: 10,
+    borderRadius: 20,
   },
 
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '100%',
+  faltas2: {
+    height: 200,
+    marginRight: 15,
+    width: '45%',
+    backgroundColor: "#C8A2C8",
+    borderRadius: 20,
   },
 
   button: {
-    width: "80%",
+    width: 220,
     paddingVertical: 40,
     backgroundColor: "#6c3483",
-    borderRadius: 12,
+    borderRadius: 20,
+    justifyContent: "center",
     alignItems: "center",
     marginTop: 10,
+    padding: 15,
   },
 
+  acesso: {
+    color: "#FAFAFA"
+  },
 });

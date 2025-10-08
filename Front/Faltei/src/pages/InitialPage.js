@@ -40,7 +40,7 @@ export default function InitialPage() {
               indicatorColor: '#4B0082',  // Roxo profundo para o indicador de mês
             }}
             // Configuração do calendário
-            current={'2025-09-12'}
+            current={'2025-10-01'}
             minDate={'2023-01-01'}
             maxDate={'2025-12-31'}
             onDayPress={(day) => {
@@ -56,17 +56,13 @@ export default function InitialPage() {
         {/* Fim do calendário */}
 
         <View style={StylesInitialPage.maisFaltas}>
-          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.faltas} />
-          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.faltas} />
+          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.faltas1} />
+          <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.faltas2} />
         </View>
 
-
-
-        <View style={StylesInitialPage.row}>
-          <TouchableOpacity onPress={() => navigation.navigate("AllMateria")} style={StylesInitialPage.button} >
-            <Text>Acesse suas disciplinas</Text>
-          </TouchableOpacity>
-        </View>
+        <TouchableOpacity onPress={() => navigation.navigate("AllMateria")} style={StylesInitialPage.button} >
+          <Text style={StylesInitialPage.acesso}>Acesse suas disciplinas</Text>
+        </TouchableOpacity>
 
       </View >
 
