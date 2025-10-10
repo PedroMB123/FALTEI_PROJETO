@@ -2,8 +2,12 @@ import React from "react";
 import { Text, TouchableOpacity, View, Image } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { useNavigation } from "@react-navigation/native";
+
+import { StylesInitialPage } from "../styles/StylesInitialPage";
+
 import EvilIcons from '@expo/vector-icons/EvilIcons';
 import { StylesTelaDeMaterias } from "../styles/StylesTelaDeMaterias";
+
 
 export default function InitialPage() {
   const navigation = useNavigation();

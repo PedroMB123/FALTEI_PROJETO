@@ -18,29 +18,27 @@ export default function InitialPage() {
 
       <View style={StylesInitialPage.fundo}>
 
-        {/* Calendário com as novas cores */}
         <View style={StylesInitialPage.calendar}>
           <Calendar
-            // Estilo básico
+
             style={{ borderRadius: 10 }}
             theme={{
-              backgroundColor: '#FAFAFA',  // Branco gelo como fundo principal
-              calendarBackground: '#E6E6FA',  // Lavanda clara como fundo do calendário
-              textSectionTitleColor: '#6A0DAD',  // Roxo médio para título das seções
-              textSectionTitleDisabledColor: '#A9A9A9',  // Cinza claro para texto desabilitado
-              selectedDayBackgroundColor: '#4B0082',  // Roxo profundo para o dia selecionado
-              selectedDayTextColor: '#FAFAFA',  // Branco gelo para o texto do dia selecionado
-              todayTextColor: '#4B0082',  // Roxo profundo para o texto de hoje
-              dayTextColor: '#2C2C2C',  // Cinza grafite para o texto dos dias
-              textDisabledColor: '#A9A9A9',  // Cinza claro para dias desabilitados
-              dotColor: '#4B0082',  // Roxo profundo para os pontos de datas marcadas
-              selectedDotColor: '#FAFAFA',  // Branco gelo para o ponto do dia selecionado
-              arrowColor: '#6A0DAD',  // Roxo médio para as setas de navegação
-              monthTextColor: '#4B0082',  // Roxo profundo para o nome do mês
-              indicatorColor: '#4B0082',  // Roxo profundo para o indicador de mês
+              backgroundColor: '#FAFAFA',
+              calendarBackground: '#E6E6FA',
+              textSectionTitleColor: '#6A0DAD',
+              textSectionTitleDisabledColor: '#A9A9A9',
+              selectedDayBackgroundColor: '#4B0082',
+              selectedDayTextColor: '#FAFAFA',
+              todayTextColor: '#4B0082',
+              dayTextColor: '#2C2C2C',
+              textDisabledColor: '#A9A9A9',
+              dotColor: '#4B0082',
+              selectedDotColor: '#FAFAFA',
+              arrowColor: '#6A0DAD',
+              monthTextColor: '#4B0082',
+              indicatorColor: '#4B0082',
             }}
-            // Configuração do calendário
-            current={'2025-10-01'}
+
             minDate={'2023-01-01'}
             maxDate={'2025-12-31'}
             onDayPress={(day) => {
@@ -53,19 +51,23 @@ export default function InitialPage() {
             }}
           />
         </View>
-        {/* Fim do calendário */}
 
         <View style={StylesInitialPage.maisFaltas}>
           <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.faltas1} />
           <TouchableOpacity onPress={() => navigation.navigate("Materia")} style={StylesInitialPage.faltas2} />
         </View>
 
+
+        <View style={StylesInitialPage.row}>
+          <TouchableOpacity onPress={() => navigation.navigate("AllMateria")} style={StylesInitialPage.button} />
+        </View>
+
         <TouchableOpacity onPress={() => navigation.navigate("AllMateria")} style={StylesInitialPage.button} >
           <Text style={StylesInitialPage.acesso}>Acesse suas disciplinas</Text>
         </TouchableOpacity>
 
-      </View >
 
+      </View >
       <StatusBar hidden />
     </View >
   );

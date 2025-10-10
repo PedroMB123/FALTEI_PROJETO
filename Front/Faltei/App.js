@@ -1,5 +1,8 @@
+import React from "react";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { AuthProvider } from "./src/context/AuthContext.js"
 
 import SignUp from "./src/pages/SignUp";
 import SignIn from "./src/pages/SignIn.js";
@@ -14,20 +17,23 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Onboarding"
-        screenOptions={{ headerShown: false }}
-      >
-        <Stack.Screen name="Onboarding" component={Onboarding} />
-        <Stack.Screen name="SignUp" component={SignUp} />
-        <Stack.Screen name="SignIn" component={SignIn} />
-        <Stack.Screen name="InitialPage" component={InitialPage} />
-        <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
-        <Stack.Screen name="Materia" component={Materia} />
-        <Stack.Screen name="AllMateria" component={AllMateria} />
-        <Stack.Screen name="UserPage" component={UserPage} />
-      </Stack.Navigator >
-    </NavigationContainer >
+    <AuthProvider>
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="SignIn"
+          screenOptions={{ headerShown: false }}
+        >
+          <Stack.Screen name="Onboarding" component={Onboarding} />
+          <Stack.Screen name="SignUp" component={SignUp} />
+          <Stack.Screen name="SignIn" component={SignIn} />
+          <Stack.Screen name="InitialPage" component={InitialPage} />
+          <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
+          <Stack.Screen name="Materia" component={Materia} />
+          <Stack.Screen name="AllMateria" component={AllMateria} />
+          <Stack.Screen name="UserPage" component={UserPage} />
+        </Stack.Navigator >
+      </NavigationContainer >
+    </AuthProvider>
+
   );
 }

@@ -1,24 +1,38 @@
 import React from "react";
-import { Text, TouchableOpacity, View } from "react-native";
-import { StatusBar } from "expo-status-bar";
-import { useNavigation } from "@react-navigation/native";
-import EvilIcons from '@expo/vector-icons/EvilIcons';
-import { StylesInitialPage } from "../styles/StylesInitialPage";
+import { View, Text, Image, SafeAreaView } from "react-native";
+import { StylesUserPage } from "../styles/StylesUserPage";
 
-export default function InitialPage() {
-  const navigation = useNavigation();
+export default function UserPage() {
+  // 🔹 Aqui você pode futuramente buscar os dados do banco
+  const user = {
+    name: "João Silva",
+    email: "joao.silva@email.com",
+    turma: "3º Ano B",
+    photo: "https://i.pravatar.cc/300" // foto genérica
+  };
 
   return (
-    <View style={{ flex: 1 }}>
-      <View style={StylesInitialPage.header}>
-        <Text style={StylesInitialPage.ptxt}> Faltei! </Text>
-      </View >
+    <SafeAreaView style={StylesUserPage.container}>
+      <Text style={StylesUserPage.title}>Perfil</Text>
 
-      <View style={StylesInitialPage.fundo}>
+      {/* Foto do usuário */}
+      <View style={StylesUserPage.imageContainer}>
+        <Image source={{ uri: user.photo }} style={StylesUserPage.image} />
+      </View>
 
-      </View >
+      {/* Informações do usuário */}
+      <View style={StylesUserPage.infoBox}>
+        <Text style={StylesUserPage.label}>Nome</Text>
+        <Text style={StylesUserPage.value}>{user.name}</Text>
 
-      <StatusBar hidden />
-    </View >
+        <Text style={StylesUserPage.label}>Email</Text>
+        <Text style={StylesUserPage.value}>{user.email}</Text>
+
+        <Text style={StylesUserPage.label}>Turma</Text>
+        <Text style={StylesUserPage.value}>{user.turma}</Text>
+      </View>
+    </SafeAreaView>
   );
 }
+
+
