@@ -16,17 +16,22 @@ import { setItem } from "../components/AsyncStorage";
 
 const { width, height } = Dimensions.get("window");
 
+
 export default function OnboardingScreen() {
   const navigation = useNavigation();
 
   const handleDone = () => {
     setItem("onboarded", "1");
-    navigation.navigate("Home");
+    navigation.navigate("InitialPage");
   };
 
   const doneButton = ({ ...props }) => {
     return (
-      <TouchableOpacity style={styles.doneButton} {...props}>
+      <TouchableOpacity
+        style={styles.doneButton}
+        {...props}
+        onPress={() => navigation.navigate("InitialPage")}
+      >
         <Text style={{ color: "#f9ebe3" }}>Done</Text>
       </TouchableOpacity>
     );
@@ -41,11 +46,11 @@ export default function OnboardingScreen() {
         containerStyles={{ paddingHorizontal: 15 }}
         pages={[
           {
-            backgroundColor: "#f9ebe3",
+            backgroundColor: "#E6E6FA",
             image: (
               <View style={styles.lottie}>
                 <LottieView
-                  source={require("../assets/images/faceID.json")}
+                  source={require("../assets/images/rfid.json")}
                   autoPlay
                   loop
                   style={{
@@ -57,21 +62,22 @@ export default function OnboardingScreen() {
                 />
               </View>
             ),
-            title: "Reconhecimento facial rápido e reguro",
+            title: "Registro por cartão rápido e seguro",
             titleStyles: {
-              color: "#d80000",
+              color: "#4b0082",
               fontWeight: "bold",
               fontSize: 30,
             },
             subtitle:
-              "Registre sua presença em segundos, sem listas ou assinaturas. Nosso sistema identifica você automaticamente e registra no banco de dados com total segurança.",
+              "Registre sua presença em segundos apenas aproximando seu cartão. Nosso sistema reconhece automaticamente e salva no banco de dados com total segurança.",
             subTitleStyles: {
               fontSize: "17",
+              color: "#C8A2C8"
             },
           },
 
           {
-            backgroundColor: "#f9ebe3",
+            backgroundColor: "#E6E6FA",
             image: (
               <View style={styles.lottie}>
                 <LottieView
@@ -89,18 +95,19 @@ export default function OnboardingScreen() {
             ),
             title: "Acompanhe suas aulas e atividades",
             titleStyles: {
-              color: "#d80000",
+              color: "#4b0082",
               fontWeight: "bold",
               fontSize: 30,
             },
             subtitle:
               "Veja suas tarefas, materiais e avisos em um só lugar. Tudo organizado para você focar no que realmente importa: aprender.",
-            ubTitleStyles: {
+            subTitleStyles: {
               fontSize: "17",
+              color: "#C8A2C8"
             },
           },
           {
-            backgroundColor: "#f9ebe3",
+            backgroundColor: "#E6E6FA",
             image: (
               <View style={styles.lottie}>
                 <LottieView
@@ -118,14 +125,15 @@ export default function OnboardingScreen() {
             ),
             title: "Perfil exclusivo para cada aluno",
             titleStyles: {
-              color: "#d80000",
+              color: "#4b0082",
               fontWeight: "bold",
               fontSize: 30,
             },
             subtitle:
               "Faça login, acesse seu histórico, personalize suas informações e acompanhe seu desempenho de forma individual e segura.",
-            ubTitleStyles: {
+            subTitleStyles: {
               fontSize: "17",
+              color: "#C8A2C8"
             },
           },
         ]}
@@ -139,7 +147,7 @@ export default function OnboardingScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f9ebe3",
+    backgroundColor: "#E6E6FA",
   },
 
   lottie: {
@@ -148,7 +156,7 @@ const styles = StyleSheet.create({
   },
   doneButton: {
     padding: 20,
-    backgroundColor: "#d80000",
+    backgroundColor: "#4B0082",
     borderTopLeftRadius: "100%",
     borderBottomLeftRadius: "100%",
   },

@@ -11,23 +11,23 @@ export const stylesSign = StyleSheet.create({
     fontSize: 50,
     fontWeight: "bold",
     marginBottom: 5,
-    color: "#d80000",
+    color: "#4B0082",
   },
 
   input: {
     borderBottomWidth: 1,
-    borderBottomColor: "#bebebe",
+    borderBottomColor: "#C8A2C8",
     paddingLeft: 10,
     paddingEnd: 70,
-    color: "#bebebe",
     marginBottom: 40,
   },
   bnt: {
-    backgroundColor: "#d80000",
+    backgroundColor: "#4B0082",
     borderRadius: 30,
     height: "30",
     width: "180",
     justifyContent: "center",
     alignItems: "center",
   },
+
 });

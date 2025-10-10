@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-export const StylesInitialPage = StyleSheet.create({
+export const StylesTelaDeMaterias = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#f9ebe3",
@@ -9,23 +9,14 @@ export const StylesInitialPage = StyleSheet.create({
   },
 
   header: {
-    //height: 100,
-    //justifyContent: "flex-end",
-    //headerTitleAlign: 'left',
-    top: 0,
-    left: 0,
-    right: 0,
-    paddingTop: 40,
-    paddingHorizontal: 16,
-    paddingBottom: 10,
-    backgroundColor: '#4B0082',
+    height: 100,
+    backgroundColor: "#4B0082",
+    justifyContent: "flex-end",
   },
 
   ptxt: {
     fontSize: 50,
     color: "#E6E6FA",
-    fontFamily: 'BebasNeue',
-    textAlign: 'left',
   },
 
   user: {
@@ -43,7 +34,7 @@ export const StylesInitialPage = StyleSheet.create({
   },
 
   calendar: {
-    marginBottom: 50,
+
   },
   balao1: {
     height: 250,
@@ -58,34 +49,46 @@ export const StylesInitialPage = StyleSheet.create({
     width: '100%',
   },
 
-  faltas1: {
+  faltas: {
     height: 200,
-    marginLeft: 15,
     width: '45%',
     backgroundColor: "#C8A2C8",
-    borderRadius: 20,
+    borderRadius: 10,
   },
 
-  faltas2: {
-    height: 200,
-    marginRight: 15,
-    width: '45%',
-    backgroundColor: "#C8A2C8",
-    borderRadius: 20,
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
   },
 
   button: {
-    width: 220,
-    paddingVertical: 40,
-    backgroundColor: "#6c3483",
-    borderRadius: 20,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 10,
-    padding: 15,
+    height: 80,
+    width: '40%',
+    backgroundColor: "#C8A2C8",
+    borderRadius: 10,
   },
 
-  acesso: {
-    color: "#FAFAFA"
+  nome: {
+    flex: 1,
+    paddingVertical: 15,
+    marginHorizontal: 5,
+    backgroundColor: '#C8A2C8',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
+
+  escrita: {
+    color: 'white',
+    fontSize: 25,
+    textAlign: 'center',
+  },
+
+  icone: {
+    width: 100,
+    height: 100,
+    marginBottom: 6, // espaço entre ícone e texto
+    resizeMode: "contain",
+  }
 });

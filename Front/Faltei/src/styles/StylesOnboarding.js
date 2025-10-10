@@ -3,25 +3,26 @@ import { StyleSheet } from "react-native";
 export const StylesOnboarding = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#E6E6FA",
     alignItems: "center",
     justifyContent: "center",
   },
 
   title: {
-    color: "#fff",
+    color: "#4B0082",
     fontSize: 40,
     fontWeight: "bold",
   },
 
   viewSignUp: {
     justifyContent: "center",
+    alignItems: "center",
     flexDirection: "row",
     gap: 7,
   },
 
   btn: {
-    backgroundColor: "#8b4513",
+    backgroundColor: "#4B0082",
     width: "80%",
     padding: 10,
     alignItems: "center",
@@ -33,6 +34,19 @@ export const StylesOnboarding = StyleSheet.create({
   },
 
   txt: {
-    color: "#fff",
+    color: "#E6E6FA",
+    fontSize: 15,
+  },
+
+  txt1: {
+    color: "#6A0DAD",
+    fontSize: 15,
+    fontWeight: "bold",
+  },
+
+  txt2: {
+    color: "#4B0082",
+    fontSize: 15,
   },
 });
+//
