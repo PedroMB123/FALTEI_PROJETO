@@ -49,102 +49,105 @@ function autenticarToken(req, res, next) {
   const token = authHeader && authHeader.split(" ")[1];
 
   if (!token) {
-    return res.status(401).json({ error: "Token não fornecido!" })
+    return res.status(401).json({ error: "Token não fornecido!" });
   }
 
   jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
     if (err) {
-      res.status(403).json({ error: "Token inválido!" })
+      res.status(403).json({ error: "Token inválido!" });
     }
 
     req.user = user;
     next();
-  })
+  });
 }
 
 // Rota: REGISTRO
 app.post("/auth/SignUp", async (req, res) => {
-
   try {
     const { nome, email, senha, rfID } = req.body;
 
+    console.log(nome, email, senha, rfID);
+
     if (!nome || !email || !senha || !rfID) {
-      return res.status(400).json({ error: "Preencha todos os campos!" })
+      return res.status(400).json({ error: "Preencha todos os campos!" });
     }
 
-    const [rows] = await pool.query("SELECT id FROM users WHERE email = ? OR rfid_tag = ?", [email, rfID])
+    const [rows] = await pool.query(
+      "SELECT id FROM alunos WHERE email = ? OR rfid_tag = ?",
+      [email, rfID]
+    );
     if (rows.length > 0) {
-      res.status(400).json({ error: "Email ou RfID já cadastrado!" })
+      res.status(400).json({ error: "Email ou RfID já cadastrado!" });
     }
 
     const senha_hash = await bcrypt.hash(senha, 10);
 
     await pool.query(
-      "INSERT INTO users (nome, email, senha, rfid_tag) VALUES (?, ? , ?, ?)",
+      "INSERT INTO alunos (nome, email, senha, rfid_tag) VALUES (?, ? , ?, ?)",
       [nome, email, senha_hash, rfID]
     );
 
-    res.status(201).json({ message: "Usuário criado com sucesso!" })
-
+    res.status(201).json({ message: "Usuário criado com sucesso!" });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: "Erro ao registrar usuário!" })
+    res.status(500).json({ error: "Erro ao registrar usuário!" });
   }
-
 });
 
 // Rota: LOGIN
 app.post("/auth/SignIn", async (req, res) => {
   try {
     const { email, senha } = req.body;
-    console.log(email, senha)
+    console.log(email, senha);
 
-    const [rows] = await pool.query("SELECT * FROM users WHERE email = ?", [email])
+    const [rows] = await pool.query("SELECT * FROM alunos WHERE email = ?", [
+      email,
+    ]);
     if (rows.length === 0) {
-      return res.status(400).json({ error: "Usuário não encontrado!" })
+      return res.status(400).json({ error: "Usuário não encontrado!" });
     }
 
     const usuario = rows[0];
 
     const senhaValida = await bcrypt.compare(senha, usuario.senha);
     if (!senhaValida) {
-      return res.status(401).json({ error: "Senha incorreta!" })
+      return res.status(401).json({ error: "Senha incorreta!" });
     }
 
     const token = jwt.sign(
       { id: usuario.id, email: usuario.email },
       process.env.JWT_SECRET,
       { expiresIn: "1h" }
-    )
+    );
 
-    res.json({ message: "Login bem sucedido!", token })
-
+    res.json({ message: "Login bem sucedido!", token });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: "Erro ao fazer login!" })
+    res.status(500).json({ error: "Erro ao fazer login!" });
   }
-})
+});
 
 // Rota: PERFIL
 app.get("/auth/UserPage", autenticarToken, async (req, res) => {
-
   try {
-    const [rows] = await pool.query("SELECT nome, email, rfid_tag FROM users WHERE id = ?", [req.user.id])
+    const [rows] = await pool.query(
+      "SELECT nome, email, rfid_tag FROM alunos WHERE id = ?",
+      [req.user.id]
+    );
 
     if (rows.length === 0) {
-      return res.status(404).json({ error: "Usuário não encontrado!" })
+      return res.status(404).json({ error: "Usuário não encontrado!" });
     }
 
-    res.json({ user: rows[0] })
-
+    res.json({ user: rows[0] });
   } catch (error) {
-    console.log(error)
-    res.status(500).json({ error: "Erro ao buscar dados do usuário!" })
+    console.log(error);
+    res.status(500).json({ error: "Erro ao buscar dados do usuário!" });
   }
-
-})
+});
 
 // Iniciando sevidor!
 app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}!`)
+  console.log(`Servidor rodando na porta ${PORT}!`);
 });
