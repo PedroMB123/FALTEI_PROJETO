@@ -15,16 +15,14 @@ export default function SignIn() {
       alert("Todos os campos são obrigatórios!");
       return;
     }
-
     try {
       // Requisição POST com axios
-      const response = await axios.post("https://meu-backend.com/login", {
+      const response = await axios.post("http://10.144.170.55:3001/auth/SignIn", {
         email,
         senha
       });
-
+      console.alert("TESTE")
       const data = response.data;
-
 
       navigation.navigate("InitialPage");
     } catch (error) {
