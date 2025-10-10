@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "react-native-calendars": "^1.1313.0"
+    "react-native-calendars": "^1.1313.0",
+    "expo": "^53.0.20"
   }
 }
